@@ -1,0 +1,386 @@
+.message {
+  font-family: 'Sans-Serif';
+  p {
+    margin: 1em 0;
+    white-space: pre-line;
+  }
+  .mail_main_tooth {
+    position: relative;
+    // display: flex;
+    .main_tooth {
+      z-index: -1;
+      position: absolute;
+      // padding-bottom: 500px !important;
+
+      top: 0px;
+      left: 0px;
+    }
+  }
+  .mail_slide_btn {
+    position: absolute;
+    // display: flex;
+
+    .mail_permanent_btn {
+      position: absolute;
+      top: 40px;
+      left: 400px;
+      z-index: 90;
+      cursor: pointer;
+      width: 200px;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1a79c6;
+      border-radius: 50px;
+    }
+    .mail_child_btn {
+      position: absolute;
+      top: 40px;
+      left: 500px;
+      color: gray;
+      background-color: #eeeeee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      border-radius: 50px;
+      z-index: 2;
+      transform: translate(55px, -5px);
+      padding: 16px 20px !important;
+    }
+  }
+  .detail {
+    margin-top: 720px;
+  }
+}
+
+.datepicker {
+  &:focus,
+  &:focus-visible {
+    z-index: 1;
+    border-color: #63b3ed;
+    box-shadow: 0 0 0 1px #63b3ed;
+  }
+
+  :global {
+    input {
+      background-color: transparent;
+      border: 1px solid;
+      border-color: inherit;
+      padding-inline-start: var(--space-4);
+      padding-inline-end: var(--space-4);
+      border-radius: var(--radii-md);
+      height: var(--sizes-10);
+      width: 100%;
+
+      &:focus,
+      &:focus-visible {
+        z-index: 1;
+        border-color: #63b3ed;
+        box-shadow: 0 0 0 1px #63b3ed;
+      }
+    }
+
+    .react-datepicker__triangle {
+      display: none;
+    }
+
+    .react-datepicker__day--selected,
+    .react-datepicker__day:hover {
+      background-color: var(--colors-brand-500);
+    }
+  }
+}
+
+.all_on {
+  margin: 0px 15px;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(30px);
+}
+
+// Tooth Content ClassName
+.tooth_content {
+  margin-top: 75px;
+  background-image: url('/maintooth.png');
+  background-repeat: no-repeat;
+  width: 1281px !important;
+  height: 738px !important;
+  position: relative;
+  .description {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    border: solid 3px #1a79c6;
+    position: absolute;
+    color: #1a79c6;
+    width: 410px;
+    top: 25px;
+    left: 15px;
+    border-radius: 8px;
+    height: 100px;
+  }
+  .description_mail {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    border: solid 3px #1a79c6;
+    position: absolute;
+    color: #1a79c6;
+    width: 410px;
+    top: 10px;
+    left: 15px;
+    border-radius: 8px;
+    height: 120px;
+  }
+  .important_notes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bolder;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 370px;
+    height: 300px;
+    color: #1a79c6;
+
+    .note {
+      display: flex;
+      align-items: center;
+      img {
+        width: 40px;
+        height: auto;
+        margin-right: 10px;
+      }
+    }
+    .implant_note {
+    }
+    .brug_note {
+    }
+    .understand_note {
+      display: flex;
+      align-items: center;
+      img {
+        width: 44px !important;
+        cursor: pointer;
+        height: auto;
+        margin-right: 10px;
+      }
+      span {
+        background-color: #1a79c6;
+        // border: solid 1px #1a79c6;
+        // margin-right: 10px;
+        // text-decoration: underline;
+      }
+    }
+  }
+  .slide_tooth_btn {
+    position: absolute;
+    top: 75px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    .permanent_tooth_btn {
+      color: white;
+      background-color: #1a79c6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 50px;
+      border-radius: 50px;
+      z-index: 9;
+      cursor: pointer;
+    }
+    .child_tooth_btn {
+      color: gray;
+      background-color: #eeeeee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 60px;
+      border-radius: 50px;
+      transform: translate(-40px, -5px);
+      z-index: 2;
+      padding: 10px !important;
+    }
+  }
+  .top_tooth_numbers {
+    position: absolute;
+    top: 170px;
+    left: 72px;
+    z-index: 10;
+    display: flex;
+    .teethTopNumber {
+      position: relative;
+      padding: 10px;
+      background-color: white;
+      border-radius: 50%;
+      font-weight: bold;
+      width: 43px;
+      color: red;
+      cursor: pointer;
+      border: solid 1px red;
+      .Top_brug_hover {
+        display: none;
+      }
+      &:hover {
+        border: solid 1px red;
+        .Top_brug_hover {
+          top: -40px;
+          left: -40px;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 14px;
+          background-color: red;
+          width: 170px;
+          height: 35px;
+          // border: solid 1px red;
+          border-radius: 10px;
+          padding: 5px 10px;
+          color: white;
+          font-weight: bold;
+        }
+      }
+      &:active {
+        background-color: red;
+        color: white;
+      }
+    }
+  }
+  .bottom_tooth_numbers {
+    position: absolute;
+    bottom: 37px;
+    left: 82px;
+    z-index: 10;
+    display: flex;
+
+    .teethBottomNumber {
+      position: relative;
+      padding: 10px;
+      background-color: white;
+      border-radius: 50%;
+      font-weight: bold;
+      width: 43px;
+      color: red;
+      cursor: pointer;
+      border: solid 1px red;
+      .Bottom_brug_hover {
+        display: none;
+      }
+      &:hover {
+        .Bottom_brug_hover {
+          top: 46px;
+          left: -40px;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 14px;
+          background-color: red;
+          width: 170px;
+          height: 35px;
+          // border: solid 1px red;
+          border-radius: 10px;
+          padding: 5px 10px;
+          color: white;
+          font-weight: bold;
+        }
+        border: solid 1px red;
+      }
+      &:active {
+        background-color: red;
+        color: white;
+      }
+    }
+  }
+  .top_teeth_image {
+    img {
+      position: absolute;
+      width: auto;
+      height: auto;
+    }
+  }
+  .tooth_buttons_top {
+    display: flex;
+    position: relative;
+    top: 278px;
+    left: 53px;
+
+    .teeth_btn_top {
+      z-index: 99;
+      box-sizing: border-box;
+      height: 158px;
+      position: relative;
+      background-color: transparent;
+      cursor: pointer;
+      z-index: 5;
+      .top_implant_hover {
+        display: none;
+      }
+      &:hover {
+        .top_implant_hover {
+          z-index: 999;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          position: relative;
+          top: -20px;
+          left: 45px;
+          width: 200px !important;
+          height: 50px !important;
+          border-radius: 7px;
+          background-color: #1a79c6;
+          color: white;
+          font-size: 14px;
+        }
+      }
+      .implantaat_image_top {
+        position: absolute;
+        bottom: 33px;
+        img {
+          z-index: 99;
+          width: 105px !important;
+        }
+      }
+    }
+  }
+  .bottom_teeth_image {
+    img {
+      position: absolute;
+      width: auto;
+      height: auto;
+    }
+  }
+  .tooth_buttons_bottom {
+    display: flex;
+    position: absolute;
+    top: 450px;
+    left: 74px;
+    .teeth_btn_bottom {
+      box-sizing: border-box;
+      height: 129px;
+      position: relative;
+      background-color: transparent;
+      cursor: pointer;
+      z-index: 5;
+      .implantaat_image_bottom {
+        position: absolute;
+        top: 27px;
+        img {
+          z-index: 99;
+          width: 105px !important;
+          // object-fit: fill;
+        }
+      }
+    }
+  }
+}
